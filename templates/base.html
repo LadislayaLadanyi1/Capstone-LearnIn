@@ -1,0 +1,60 @@
+{% block doc -%}
+<!DOCTYPE html>
+<html{% block html_attribs %}{% endblock html_attribs %}>
+{%- block html %}
+  <head>
+    {%- block head %}
+    <title>{% block title %}LearnIn{% endblock title %}</title>
+    
+    {%- block metas %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%- endblock metas %}
+
+    {%- block styles %}
+
+    <!-- Theme style  -->
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    {%- endblock styles %}
+
+
+
+    {%- endblock head %}
+  </head>
+  <body{% block body_attribs %}{% endblock body_attribs %}>
+    {% block body -%}
+    {% block navbar %}
+
+    <div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="index.html"><i class="icon-study"></i>LearnIn<span>.</span></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							
+							<li><a href="about.html">About</a></li>
+							<li><a href="pricing.html">Pricing</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="btn-cta"><a href="{{ url_for('login') }}"><span>Login</span></a></li>
+							<li class="btn-cta"><a href="{{ url_for('register') }}"><span>Register</span></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+    {%- endblock navbar %}
+    {%- endblock body %}
+</body>
+{%- endblock html %}
+</html>
+{% endblock doc -%}

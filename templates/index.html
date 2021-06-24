@@ -71,7 +71,7 @@
 							<li class="active"><a href="index.html">Home</a></li>
 							
 							<li><a href="about.html">About</a></li>
-							<li><a href="pricing.html">Pricing</a></li>
+							<li><a href="{{ url_for('pricing') }}">Pricing</a></li>
 							<li><a href="contact.html">Contact</a></li>
 							<li class="btn-cta"><a href="{{ url_for('login') }}"><span>Login</span></a></li>
 							<li class="btn-cta"><a href="{{ url_for('register') }}"><span>Register</span></a></li>
@@ -93,7 +93,10 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>Begin your at home learning adventure</h1>
-									<p><a class="btn btn-primary btn-lg" href="#">Watch video!</a></p>
+								   <br>
+								   <br>
+								   <br>
+									<h4 style="color: white;">Get a customised flexible education program anywhere in the world</h4>
 			   				</div>
 			   			</div>
 			   		</div>  
@@ -106,7 +109,10 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>Customised flexible educational program from your home</h1>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Watch video!</a></p>
+								   <br>
+								   <br>
+								   <br>
+									<h4 style="color: white;">Get a customised flexible education program anywhere in the world</h4>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -119,7 +125,10 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>We help you to learn new things</h1>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Wacth video!</a></p>
+								   <br>
+								   <br>
+								   <br>
+									<h4 style="color: white;">Get a customised flexible education program anywhere in the world</h4>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -174,12 +183,12 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<h2>Who are we</h2>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						<p>Out team is built from a wide variety of backgrounds from all over the world. What we have in common is our passion to get a quality education to everyone. We’ve built our platform with our own digital learning experiences in mind to provide a fun and easy experience for students and their parents. </p>
 					</div>
 					<div class="col-md-8 col-md-pull-1 animate-box">
-						<img class="img-responsive" src="{{url_for('static', filename='images/thundercats.jpeg')}}" alt="team">
+						<img class="img-responsive" src="{{url_for('static', filename='images/thundercats.jpeg')}}" alt="team" style="max-width: 70%;">
 					</div>
-					<div class="col-md-4 animate-box">
+					<div class="col-md-4 animate-box">  		   	
 						<div class="mt">
 							<br>
 							<br>
@@ -226,7 +235,7 @@
 						</span>
 						<div class="desc">
 							<h3><a href="#">World class teaching</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<p>We have sourced some of the best teachers from around the country to deliver content in their proven methodologies. </p>
 						</div>
 					</div>
 				</div>
@@ -237,7 +246,7 @@
 						</span>
 						<div class="desc">
 							<h3><a href="#">School experience brought to your home</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<p>With our interactive tools, children can learn and play together and easily communicate to help each other and build friendships with their peers. </p>
 						</div>
 					</div>
 				</div>
@@ -248,21 +257,11 @@
 						</span>
 						<div class="desc">
 							<h3><a href="#">State approved curriculum</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<p>All of our courses are in-line with official curriculum and prepare students for high performance in standardized tests. </p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 text-center animate-box">
-					<div class="services">
-						<span class="icon">
-							<i class="icon-lab2"></i>
-						</span>
-						<div class="desc">
-							<h3><a href="#">Science &amp; Technology</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-						</div>
-					</div>
-				</div>
+				
 				
 			</div>
 		</div>
@@ -276,32 +275,32 @@
 					<p>Meet some of our world class teachers...</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row">                            
 				<div class="col-md-6 animate-box">
 					<div class="course">
-						<a href="#" class="course-img" style="background-image: url(images/project-1.jpg);">
+						<img src="{{url_for('static', filename='images/teacher1.jpeg')}}" class="course-img" style="background-image: url({{ url_for("pictures", filename="teacher1") }});"> 
+						</a>
+						<div class="desc">
+							<h3><a href="#">Mr Brandon</a></h3>
+							<p>Mr. Brandon has spent eight years teaching classes between K-6. He is super excited to experiment with technology in his teaching role at LearnIn. He is committed to providing your family with a loving and developmentally sound foundation for a lifetime of learning. He believes that play is a child's most important work he strives to create and maintain an online experience where your child can grow and thrive.</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<img src="{{url_for('static', filename='images/teacher2.jpeg')}}" class="course-img" style="background-image: url({{ url_for("pictures", filename="teacher2") }});">
 						</a>
 						<div class="desc">
 							<h3><a href="#">Mr Mauro</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<p>​Mr. Mauro has been teaching for 10 years. He grew up in Houston, Texas, and attended college at Rice University, where he studied Family and Child Development. When he’s not teaching, he is at home with his three awesome kids: Lily, Tristan, and Eli! All three of his kids are enrolled in LearnIn so he has the opportunity to create great memories of our school while sharing them with students around the country. </p>
 							
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 animate-box">
 					<div class="course">
-						<a href="#" class="course-img" style="background-image: url(images/project-2.jpg);">
-						</a>
-						<div class="desc">
-							<h3><a href="#">Prof Brandon</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-							
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="course">
-						<a href="#" class="course-img" style="background-image: url(images/project-3.jpg);">
+						<img src="{{url_for('static', filename='images/teacher3.jpeg')}}" class="course-img" style="background-image: url({{ url_for("pictures", filename="teacher3") }});">
 						</a>
 						<div class="desc">
 							<h3><a href="#">Miss Ladislaya</a></h3>
@@ -315,8 +314,8 @@
 						<a href="#" class="course-img" style="background-image: url(images/project-4.jpg);">
 						</a>
 						<div class="desc">
-							<h3><a href="#">Miss Maria</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<h3><a href="#">Miss Ladi</a></h3>
+							<p>Ms. Ladi always wanted to be a teacher and has been fortunate and blessed enough to have been teaching since she graduated university. Her dream is to run an amazing school that has a nurturing, loving environment where children can learn and experience new challenges that will help build their confidence while they play and learn. She takes that spirit to the classes at LearnIn and she looks forward to having a positive impact on children's growth and to new bring them new discoveries in their education journey. </p>
 							
 						</div>
 					</div>

@@ -79,6 +79,11 @@ def register():
 
     return render_template("register.html", form=form)
 
+@app.route("/pricing")
+def pricing():
+    return render_template("pricing.html")
+
+
 @app.route("/logout")
 def logout():
     logout_user()
@@ -92,7 +97,7 @@ def pictures(filename):
     print(filename_full, flush=True)
     return send_from_directory('static', filename_full)
 
-
+PIPENV_IGNORE_VIRTUALENVS=1
 
 if __name__ == "__main__":
    app.run(debug = True)
