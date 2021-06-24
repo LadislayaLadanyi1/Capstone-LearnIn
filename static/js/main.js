@@ -284,7 +284,7 @@
 		contentWayPoint();
 		dropdown();
 		goToTop();
-		loaderPage();
+		// loaderPage();
 		counterWayPoint();
 		counter();
 		parallax();

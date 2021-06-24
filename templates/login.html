@@ -1,7 +1,8 @@
 <!-- Theme style  -->
-<!-- {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
 
-{% block title %} {{ super() }} | Login{% endblock %}
+<!-- {% block title %} {{ super() }} | Login{% endblock %}
 
 <head>
     <meta charset="utf-8">
@@ -14,14 +15,11 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/sign-in/">
 
-     Bootstrap core CSS 
+    
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> 
 </head> 
+
 -->
-
-
-{% import "bootstrap/wtf.html" as wtf %}
-
 
 {% block content %}
 
@@ -37,7 +35,8 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" input type="submit" value="login" style="background-color: #08a12e;">Login</button>
+    <button name="login" class="btn btn-lg btn-primary btn-block" input type="submit" value="parent" style="background-color: #08a12e;">Login Parent</button>
+    <button name="login" class="btn btn-lg btn-primary btn-block" input type="submit" value="student" style="background-color: #08a12e;">Login Student</button>
     
         <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
         </form>
